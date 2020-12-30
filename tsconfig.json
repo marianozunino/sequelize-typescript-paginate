@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
     "target": "ES2015",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -13,5 +14,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "esModuleInterop": true
-  }
+  },
+  "include": ["src"]
 }
