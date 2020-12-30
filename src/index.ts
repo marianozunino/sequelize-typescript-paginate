@@ -1,10 +1,10 @@
 import { Model } from 'sequelize-typescript';
 import { FindOptions } from 'sequelize';
 
-interface PaginationOptions extends FindOptions {
+type PaginationOptions = {
   page?: number;
   pageSize?: number;
-}
+} & FindOptions;
 
 type PaginationResult<I> = {
   docs: I[];
@@ -41,10 +41,9 @@ export class PaginatedModel extends Model {
 
     if (params.order) options.order = params.order;
 
-    let [total, rows] = await Promise.all([this.count(countOptions), this.findAll(options)]);
-    if (options.group !== undefined) {
-      total = total['length'];
-    }
+    const [count, rows] = await Promise.all([this.count(countOptions), this.findAll(options)]);
+
+    const total = options.group !== undefined ? count['length'] : count;
     const typedRows = (rows as unknown) as I[];
     const pages = Math.ceil(total / pageSize);
 

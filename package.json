@@ -2,8 +2,8 @@
   "name": "sequelize-typescript-paginate",
   "version": "1.0.0",
   "description": "Sequelize Model with pagination for Sequelize-Typescript",
-  "main": "src",
-  "types": "src/types.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Mariano Zunino <marianozunino@zoho.com>",
   "license": "MIT",
   "bugs": {
@@ -14,11 +14,11 @@
     "prepare": "npm run build",
     "clean": "rimraf dist",
     "check:pre-commit": "npm run lint:fix && npm run build",
-    "check:pre-push": "npm run lint",
+    "check:pre-push": "npm test",
     "lint": "eslint . --ext .js",
     "lint:fix": "npm run lint -- --fix",
     "build": "npm run clean && tsc",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha --exit --no-timeouts -r ts-node/register 'test/**/*.ts'"
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' TS_NODE_PROJECT=tsconfig.spec.json nyc mocha --exit --no-timeouts -r ts-node/register 'test/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,15 @@
     "sequelize-typescript": "1.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "@istanbuljs/nyc-config-typescript": "1.0.1",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/commit-analyzer": "8.0.1",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/github": "7.2.0",
+    "@semantic-release/npm": "7.0.9",
+    "@semantic-release/release-notes-generator": "9.0.1",
     "@types/chai": "4.2.14",
     "@types/lodash.range": "3.2.6",
     "@types/mocha": "8.2.0",
@@ -58,6 +66,7 @@
     "semantic-release": "17.3.1",
     "sequelize": "^5.22.3",
     "sequelize-cli": "6.2.0",
+    "source-map-support": "0.5.19",
     "travis-deploy-once": "5.0.11",
     "ts-node": "9.1.1",
     "typescript": "^4.1.3"

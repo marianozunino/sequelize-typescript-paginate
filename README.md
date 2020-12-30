@@ -1,9 +1,7 @@
 # sequelize-typescript-paginate
 
-[![npm version](https://img.shields.io/npm/v/sequelize-paginate.svg)](https://www.npmjs.com/package/sequelize-paginate)
-[![npm downloads](https://img.shields.io/npm/dm/sequelize-paginate.svg)](https://www.npmjs.com/package/sequelize-paginate)
-[![Build Status](https://travis-ci.org/eclass/sequelize-paginate.svg?branch=master)](https://travis-ci.org/eclass/sequelize-paginate)
-[![devDependency Status](https://img.shields.io/david/dev/eclass/sequelize-paginate.svg)](https://david-dm.org/eclass/sequelize-paginate#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/sequelize-typescript-paginate.svg)](https://www.npmjs.com/package/sequelize-typescript-paginate)
+[![Coverage Status](https://coveralls.io/repos/marianozunino/sequelize-typescript-paginate/badge.png)](https://coveralls.io/r/marianozunino/sequelize-typescript-paginate)
 
 > Sequelize Base Model with pagination for Sequelize-Typescript
 >
