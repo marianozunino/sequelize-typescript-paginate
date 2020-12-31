@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/sequelize-typescript-paginate.svg)](https://www.npmjs.com/package/sequelize-typescript-paginate)
 [![Coverage Status](https://coveralls.io/repos/marianozunino/sequelize-typescript-paginate/badge.png)](https://coveralls.io/r/marianozunino/sequelize-typescript-paginate)
+[![deps](https://david-dm.org/marianozunino/sequelize-typescript-paginate.svg)](https://david-dm.org/marianozunino/sequelize-typescript-paginate)
+[![dev deps](https://david-dm.org/marianozunino/sequelize-typescript-paginate/dev-status.svg)](https://david-dm.org/marianozunino/sequelize-typescript-paginate/?type=dev)
 
 > Sequelize Base Model with pagination for Sequelize-Typescript
 >
@@ -53,7 +55,7 @@ const options = {
 const { docs, pages, total } = await Author.paginate(options);
 ```
 
-**NOTE:** _If **options** includes **limit** or **offset** they will be ignored._
+**NOTE:** _If **options** includes **limit** or **offset** this will be ignored._
 
 ## License
 
