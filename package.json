@@ -4,6 +4,9 @@
   "description": "Sequelize Model with pagination for Sequelize-Typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "author": "Mariano Zunino <marianozunino@zoho.com>",
   "license": "MIT",
   "bugs": {
