@@ -18,7 +18,7 @@ npm i sequelize-typescript-paginate
 ## Usege
 
 ```ts
-import { PaginatedModel } from 'sequelize-typescript-pagination';
+import { PaginatedModel } from 'sequelize-typescript-paginate';
 import { Sequelize, Column, DataType, ForeignKey, Table, HasMany } from 'sequelize-typescript';
 
 @Table({ tableName: 'book' })
